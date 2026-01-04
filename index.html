@@ -8,10 +8,64 @@
     <title>vitedemo</title>
   </head>
   <body>
-    <div id="app">
-      <h2 id="head" class="text-red-700 text-3xl">Hello world</h2>
-      <button type="button" id="btn">change</button>
+    <div
+      class="w-full h-screen justify-center items-center flex flex-col gap-5 bg-amber-800"
+    >
+      <div
+        class="flex w-100 font-bold text-3xl text-center justify-center items-center"
+      >
+        <h1 id="result"></h1>
+      </div>
+      <div class="flex w-100 justify-center items-center h-15">
+        <select
+          title="operator"
+          name="operator"
+          id="operator"
+          class="flex w-60 font-bold text-2xl text-center justify-center items-center p-3"
+        >
+          <option value="plus">+</option>
+          <option value="minus">-</option>
+          <option value="divide">/</option>
+          <option value="multi">*</option>
+        </select>
+      </div>
+      <div
+        class="flex flex-col rounded-2xl gap-y-3 w-100 font-bold text-4xl text-center"
+      >
+        <input
+          type="number1"
+          title="number1"
+          id="num1"
+          name="num1"
+          class="border border-gray-200 rounded-2xl h-15 text-center"
+        />
+        <input
+          type="number2"
+          title="number2"
+          id="num2"
+          name="num2"
+          class="border border-gray-200 rounded-2xl h-15 text-center"
+        />
+      </div>
+      <div>
+        <button
+          title="btn"
+          id="btn"
+          class="border border-gray-200 rounded-2xl h-15 w-100 cursor-pointer flex justify-center items-center"
+        >
+          Operator
+        </button>
+      </div>
+      <div id="pos"></div>
+      <div class="flex flex-col gap-3">
+        <textarea name="area" id="area" title="area"></textarea>
+        <div class="flex w-50 h-10 justify-center items-center gap-x-5">
+          <progress value="0" max="100" id="progress"></progress>
+          <p id="percent">0%</p>
+        </div>
+      </div>
     </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
